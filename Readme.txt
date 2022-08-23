@@ -1,0 +1,1 @@
+En este repo se subiran los ejercicios del curso de C#
