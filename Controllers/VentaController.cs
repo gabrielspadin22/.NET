@@ -17,17 +17,12 @@ namespace API.Controllers
         }
         // Crear venta -----------------------------------------
         [HttpPost(Name = "PostVenta")]
-        public bool CrearVenta([FromBody] PostVenta venta, ProductoVendido productosVendidos)
+        public bool CrearVenta([FromBody] PostVenta venta)
         {
-            return VentaHandler.CrearVenta(new Venta
+            return VentaHandler.CrearVenta(new PostVenta
             {
-                Comentarios = venta.Comentarios
-            },
-            new ProductoVendido
-            {
-                Stock = productosVendidos.Stock,
-                IdProducto = productosVendidos.IdProducto,
-                IdVenta = productosVendidos.IdVenta
+                Comentarios = venta.Comentarios,
+                ProductosVendidos = venta.ProductosVendidos,
             });
         }
     }

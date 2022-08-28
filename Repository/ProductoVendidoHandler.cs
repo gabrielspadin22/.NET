@@ -1,4 +1,4 @@
-﻿using API.Model;
+﻿/*using API.Model;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -40,3 +40,4 @@ namespace API.Repository
         }
     }
 }
+*/
